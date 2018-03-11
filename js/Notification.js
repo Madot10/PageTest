@@ -1,11 +1,4 @@
 window.OneSignal = window.OneSignal || [];
-var initOptions = {
-  appId: "5bc53e0e-df54-43b0-9da3-90efd72057ad",
-  autoRegister: false,
-  notifyButton: {
-    enable: true
-  }
-};
 
 
 function changeServiceWorkerFilePath() {
@@ -16,7 +9,13 @@ function changeServiceWorkerFilePath() {
 
 OneSignal.push(function () {
     changeServiceWorkerFilePath();
-    OneSignal.init(initOptions);
+    OneSignal.init({
+        appId: "5bc53e0e-df54-43b0-9da3-90efd72057ad",
+        autoRegister: false,
+        notifyButton: {
+          enable: true,
+        },
+      });
 });
 
 function log() {
