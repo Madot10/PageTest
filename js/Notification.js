@@ -1,16 +1,10 @@
-/*
-Push.create('Hello World!');
-
-window.onload = function() {
-    Push.create("Hello world!", {
-        body: "How's it hangin'?",
-        icon: '/icon.png',
-        timeout: 4000,
-        onClick: function () {
-            window.focus();
-            this.close();
-        }
-    });
-}
-
-*/
+var OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+            appId: "5bc53e0e-df54-43b0-9da3-90efd72057ad",
+            autoRegister: false,
+            notifyButton: {
+                enable: true,
+            },
+            });
+        });
