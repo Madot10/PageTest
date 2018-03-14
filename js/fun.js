@@ -1,6 +1,5 @@
 // 22/02/2018 Madot Ucab
 
-alert(navigator.userAgent);
 //console.log(jsonCarrera);
 //variables
 let inOpt;
