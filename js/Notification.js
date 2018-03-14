@@ -18,5 +18,5 @@ OneSignal.push(function () {
       });
 });
 
-document.write(navigator.userAgent);
+alert(navigator.userAgent);
 
