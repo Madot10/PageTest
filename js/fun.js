@@ -1,5 +1,4 @@
 // 22/02/2018 Madot Ucab
-
 //console.log(jsonCarrera);
 //variables
 let inOpt;
@@ -9,12 +8,82 @@ let jdatasl;
 
 let stSede = false;
 
+var modal;
+var span;
+
 window.onload = function() {
     document.getElementById("ucShow").innerHTML = formatNumber.new(ValueUC, "Bs.F. ");
     document.getElementById("sl_carrera").selectedIndex = 0;
     document.getElementById("sl_sede").selectedIndex = 0;
 
+    // Get the modal
+    modal = document.getElementById('myModal');
+    moig = document.getElementById('IgModal');
+
+    // Get the <span> element that closes the modal
+    span = document.getElementsByClassName("close")[0];
+
     //alert("Realizando cambios con respeto a MONTO A PAGAR en este primer periodo. Intente más tarde!");
+
+
+}
+
+
+//modal1
+function LauchModal(){
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+function closeModal() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+// Modal IG
+function LauchMo(){
+    moig.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+function closeMo() {
+    moig.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == moig) {
+        moig.style.display = "none";
+    }
+}
+
+
+//Send tag for server push
+function LoadTag(){
+    modal.style.display = "none";
+    var sltag = document.getElementById("carreraRes");
+    var tuser = sltag.options[sltag.selectedIndex].value;
+
+    OneSignal.push(function () {
+     
+        OneSignal.sendTag("user_type",tuser);
+        OneSignal.sendTag("user_completed","true", function(tagsSent){
+              //retornamos a web
+            location.href="https://madot10.github.io/UCalculadora/";
+            alert("COMPLETADO!");
+        });
+    });
+
+    //retornamos a web
+    //location.href="https://madot10.github.io/UCalculadora/";
+    
 }
 
 //Fun retorna jsonData de carrera
