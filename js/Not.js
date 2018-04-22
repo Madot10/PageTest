@@ -50,6 +50,7 @@ function checkSusc(){
             }else{
                 state=true;
             }
+            console.log("State susc: "+ state);
         });
     });
 
