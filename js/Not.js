@@ -7,11 +7,18 @@ var initOptions = {
       enable: true,
     },
   };
-
+/*
 function changeServiceWorkerFilePath() {
     OneSignal.SERVICE_WORKER_PATH = 'UCalculadora//OneSignalSDKWorker.js';
     OneSignal.SERVICE_UPDATER_WORKER_PATH = 'UCalculadora//OneSignalSDKUpdaterWorker.js';
     OneSignal.SERVICE_WORKER_PARAM = { scope: '/UCalculadora/' };
+};
+*/
+
+function changeServiceWorkerFilePath() {
+    OneSignal.SERVICE_WORKER_PATH = 'PageTest/OneSignalSDKWorker.js';
+    OneSignal.SERVICE_UPDATER_WORKER_PATH = 'PageTest/OneSignalSDKUpdaterWorker.js';
+    OneSignal.SERVICE_WORKER_PARAM = { scope: '/PageTest/' };
 };
 
 OneSignal.push(function () {
