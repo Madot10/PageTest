@@ -13,41 +13,99 @@
 a{
     color: white;
 }
-.tituloCont{
-    /*border-bottom: 5px solid #686868;*/
+
+/*Blue color*/
+.blueM{
+    color: #34B2E4;
 }
 
-footer{
-    background-color: #374746;
-    color: white;
+/*Green color*/
+.greenM{
+    color: #4b7f52;
 }
 
+.separator{
+    background-color: #d6d6d6;
+    color: #374746;
+    margin: 0;
+    overflow: auto;
+    padding: 0.2em;
+    border-radius: 0.2em;
+    text-transform: uppercase;
+    
+}
+
+/*Elimnar decoracion de texto*/
+.noUnder{
+    text-decoration: none;
+}
+/*Numeros grandes*/
 #num{
 	font-size: 1.7em;
 }
 
+/*Alinear elementos*/
+.aleft {
+	float: left;
+}
+.aright {
+	float: right;
+}
+
+/*options div*/
+.option{
+    overflow: auto;
+   margin-bottom: 0.5em;
+   margin-left: 1em;
+   margin-right: 1em;
+
+}
+
+/*Vertical center*/
+.centerV{
+
+}
 .top{
     background-color: white;
 }
 
 h1{
-   /*text-shadow: 2px 2px #374746;*/
     text-transform: uppercase;
 	border-bottom: 5px solid #FED201;
 }
 h5{
     text-transform: uppercase;
 }
+
+.textYellow{
+    /*text-shadow: 2px 2px 20px black;*/
+    color: #374746;
+}
+
+#addMat{
+    width: 100%;
+}
+
 body {
     /*font: 100% Fedra-Sans-Std-Bold, sans-serif;*/
-    font-family: "Open Sans", Arial, sans-serif;;
-	background-color: white;
+    font-family: "Open Sans", Arial, sans-serif !important; 
+    background-color: white;
     text-align:center;
     align-content: center;
+    /*
+    margin: auto;
+    max-width: 500px;
+    */
     color: #374746;
-    font-size: 1.1em;
+    font-size: 1.1em !important;
 
- 
+    text-align: center;
+}
+
+footer{
+    background-color: #374746;
+    color: white;
+    margin: 0;
 }
 
 table, th, td {
@@ -57,9 +115,17 @@ table, th, td {
 }
 
 table{
-    margin-top: 5px;
+    margin-top: 4px;
     padding: 2px;
     
+}
+
+.bR{
+    border-right: 0;
+}
+
+.bL{
+    border-left: 0;
 }
 
 img {
@@ -72,6 +138,7 @@ th, td {
     text-align: center;
     width:fit-content;    
 }
+
 
 .totalizacion{
     visibility: hidden;
@@ -97,7 +164,6 @@ button{
     background-color: #4b7f52;
     border: none;
     color: white;
-    padding: 1% 1%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -106,207 +172,97 @@ button{
     cursor: pointer;
 }
 
+
 #btReload{
     font-size: 0;
 }
 
-/* Separador************************************** */
-
-.styled-select {
-    background: url(../img/15xvbd5.png) no-repeat 96% 0;
-    min-height: 29px;   
-    overflow: hidden;
-    min-width: 100px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
- }
- 
- .styled-select select {
-    background: transparent;
-    border: none;
-    font-size: 14px;
-    height: 29px;
-    padding: 5px; /* If you add too much padding here, the options won't show in IE */
-    width: 268px;
- }
- 
- .styled-select.slate {
-    background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
-    height: 34px;
-    width: 240px;
- }
- 
- .styled-select.slate select {
-    border: 1px solid #ccc;
-    font-size: 16px;
-    height: 34px;
-    width: 268px;
- }
- 
- /* -------------------- Rounded Corners */
- .rounded {
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
- }
- 
- .semi-square {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
- }
- 
- /* -------------------- Colors: Background */
- .slate   { background-color: #ddd; }
- .green   { background-color: #779126; }
- .blue { background-color:  #4b7f52; }
- .yellow  { background-color: #eec111; }
- .black   { background-color: #4b7f52; }
- 
- /* -------------------- Colors: Text */
- .slate { color: #000 !important;} 
- .green { color: #fff !important;}
- .blue { color: #fff !important;}
- .yellow { color: #000 !important;}
- .black { color: #fff !important;}
- 
- 
- /* -------------------- Select Box Styles: danielneumann.com Method */
- /* -------------------- Source: http://danielneumann.com/blog/how-to-style-dropdown-with-css-only/ */
- #mainselection select {
-    border: 0;
-    color: #EEE;
-    background: transparent;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 2px 10px;
-    width: 378px;
-    *width: 350px;
-    *background: #58B14C;
-    -webkit-appearance: none;
- }
- 
- #mainselection {
-    overflow:hidden;
-    width:350px;
-    -moz-border-radius: 9px 9px 9px 9px;
-    -webkit-border-radius: 9px 9px 9px 9px;
-    border-radius: 9px 9px 9px 9px;
-    box-shadow: 1px 1px 11px #330033;
-    background: #58B14C url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
- }
- 
- 
- /* -------------------- Select Box Styles: stackoverflow.com Method */
- /* -------------------- Source: http://stackoverflow.com/a/5809186 */
- select#soflow, select#soflow-color {
-    -webkit-appearance: button;
-    border-radius: 2px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-    -webkit-padding-end: 20px;
-    -webkit-padding-start: 2px;
-    user-select: none;
-    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
-    background-position: 97% center;
-    background-repeat: no-repeat;
-    border: 1px solid #AAA;
-    color: #555;
-    font-size: inherit;
-    margin: 20px;
-    overflow: hidden;
-    padding: 5px 10px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 300px;
- }
- 
- select#soflow-color {
-    color: #fff;
-    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#779126, #779126 40%, #779126);
-    background-color: #779126;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    padding-left: 15px;
- }
-
-
-
-#aTouch{
-    color: #4b7f52;
+.slAgr{
+    width: 15em;
 }
 
 
-/*****************************MODAL********************/
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Header */
-.modal-header {
-    padding: 2px 16px;
-    background-color: #4b7f52;
-    color: white;
-}
-
-/* Modal Body */
-.modal-body {padding: 2px 16px;}
-
-/* Modal Footer */
-.modal-footer {
-    padding: 2px 16px;
+.select-square{
     background-color: white;
-    color: white;
+    color: #4b7f52 ;
+    border: 2px solid #4b7f52;
+    min-height: 2.5em;
+	font-size: 0.8em;
+}
+/*
+.select-square:hover{
+    background-color: #4b7f52;
+    color: white ;
+}
+*/
+
+
+img.n{
+    height: 1em;
+    width: auto;
 }
 
-/* Modal Content */
-.modal-content {
+button.n{
+    /*background-color: white;*/
+    height: 1em;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
     position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    animation-name: animatetop;
-    animation-duration: 0.4s
-}
-
-/* Add Animation */
-@-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
-}
-
-@keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-}
-
-/* The Close Button */
-.close {
-    color: white;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {display:none;}
+  
+  /* The slider */
+  .slider {
+    position: absolute;
     cursor: pointer;
-}
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #4b7f52;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #4b7f52;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
