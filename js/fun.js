@@ -101,7 +101,9 @@ function OpenDiv(divName){
             
 
             // Revisamos estado de suscripcion
-            if(checkSusc()){
+            let valSus = checkSusc();
+            console.log('Open div val sus: '+valSus);
+            if(valSus){
                 //esta suscrito
                 SusDiv.style.display = "block";
                 NsusDiv.style.display = "none";
